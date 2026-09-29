@@ -7,7 +7,7 @@ export default function SunWorld() {
     { city: 'أمريكا', country: 'الولايات المتحدة', phone: '+1 XXX XXX XXXX', email: 'us@sunworld3d.com' },
     { city: 'عمان', country: 'سلطنة عمان', phone: '+968 XXXX XXXX', email: 'om@sunworld3d.com' },
     { city: 'دبي', country: 'الإمارات العربية المتحدة', phone: '+971 XXXX XXXX', email: 'uae@sunworld3d.com' },
-    { city: 'عمان', country: 'الأردن', phone: '+962 XXXX XXXX', email: 'jo@sunworld3d.com' },
+    { city: 'عمان', country: 'الأردن', phone: '+962 XXXX XXXX', email: 'jo@sunworld3d.com' }
   ];
 
   return (
@@ -50,7 +50,6 @@ export default function SunWorld() {
             <Globe className="text-yellow-500 w-6 h-6" />
             <h2 className="text-3xl font-bold text-gray-900">فروعنا الدولية</h2>
           </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {branches.map((branch, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-lg border border-gray-100 flex flex-col items-center text-center">
@@ -58,7 +57,14 @@ export default function SunWorld() {
                 <h3 className="text-lg font-bold text-gray-900 mb-1">{branch.city}</h3>
                 <span className="text-sm text-gray-500 mb-4">{branch.country}</span>
                 <div className="text-sm text-gray-600 space-y-1">
-                  <p className="flex items-center gap-2"><Phone className="w-4 h-4" /> {branch.phone}</p>
+                  <div className="flex items-center gap-2">
+                    <Phone className="w-4 h-4" />
+                    <span>{branch.phone}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Mail className="w-4 h-4" />
+                    <span>{branch.email}</span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -72,7 +78,7 @@ export default function SunWorld() {
             <Sun className="text-yellow-500 w-6 h-6" />
             <span className="text-xl font-bold text-gray-900">Sun World</span>
           </div>
-          <p className="text-gray-500 text-sm">© ٢٠٢٦ جميع الحقوق محفوظة لشركة صن وورلد.</p>
+          <p className="text-gray-500 text-sm">© ٢٠٢٦ جميع الحقوق محفوظة لشركة صن وورلد</p>
         </div>
       </footer>
     </div>
